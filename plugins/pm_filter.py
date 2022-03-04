@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found 🙁😐 Request that to admin 👉 @FeedbackdcBot')
+            k = await query.message.edit('This Movie Not Found 🙁😐 Request that to admin 👉 @jack_sparow119')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -407,7 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates', url='https://t.me/UMlinks')
+            InlineKeyboardButton('Updates', url='https://t.me/filmyfunda_movies')
         ], [
             InlineKeyboardButton('Help', callback_data='help'),
             InlineKeyboardButton('About', callback_data='about')
@@ -438,7 +438,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('Updates', url='https://t.me/Umlinks'),
+            InlineKeyboardButton('Updates', url='https://t.me/filmyfunda_movies'),
             InlineKeyboardButton('Source Code', callback_data='source')
         ], [
             InlineKeyboardButton('Home', callback_data='start'),
