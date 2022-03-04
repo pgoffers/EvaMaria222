@@ -47,8 +47,8 @@ async def start(client, message):
             InlineKeyboardButton('Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('Updates', url='https://t.me/filmyfunda_movies')
             ],[
-            InlineKeyboardButton('Help', callback_data='help'),
-            InlineKeyboardButton('About', callback_data='about')
+            InlineKeyboardButton('Help', url=https://t.me/filmyfunda_movies'),
+            InlineKeyboardButton('About', url=https://t.me/filmyfunda_movies')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -90,8 +90,8 @@ async def start(client, message):
             InlineKeyboardButton('Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('Updates', url='https://t.me/filmyfunda_movies')
             ],[
-            InlineKeyboardButton('Help', callback_data='help'),
-            InlineKeyboardButton('About', callback_data='about')
+            InlineKeyboardButton('Help', url=https://t.me/filmyfunda_movies'),
+            InlineKeyboardButton('About', url=https://t.me/filmyfunda_movies ')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
