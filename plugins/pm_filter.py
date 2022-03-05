@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found 🙁😐 Request that to admin 👉 @FeedbackdcBot')
+            k = await query.message.edit('This Movie Not Found 🙁😐 Request that to admin 👉 @jack_sparow119')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -407,7 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates', url='https://t.me/Groupdcbots')
+            InlineKeyboardButton('Updates', url='https://t.me/filmyfunda_movies')
         ], [
             InlineKeyboardButton('Help', callback_data='help'),
             InlineKeyboardButton('About', callback_data='about')
@@ -439,7 +439,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('Updates', url='https://t.me/groupdcbots'),
+            InlineKeyboardButton('owner', url='https://t.me/jack_sparow119'),
             InlineKeyboardButton('Source Code', callback_data='source')
         ], [
             InlineKeyboardButton('Home', callback_data='start'),
@@ -709,7 +709,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🚀 Here is what Movie.I found for your Request ➾ {search} \n\n〽️ Powered by @GroupDcBots"
+        cap = f"🚀 Here is what Movie.I found for your Request ➾ {search} \n\n〽️ Powered by @filmyfunda_movies"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -736,7 +736,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.〽️ Powered by @GroupDcBots")
+        k = await msg.reply("I couldn't find any movie in that name")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -765,7 +765,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("🚀 I couldn't find anything related to that. Check your spelling in Google 😠 \n\n〽️ Powered by @GroupDcBots")
+        k = await msg.reply("🚀 I couldn't find anything related to that. Check your spelling in Google 😠")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -777,7 +777,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("🚀 I couldn't find anything related to that\nDid you mean any one of these? 👇 \n\n〽️ Powered by @GroupDcBots",
+    await msg.reply("🚀 I couldn't find anything related to that\nDid you mean any one of these? 👇",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
