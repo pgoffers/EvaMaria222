@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found 🙁😐 Request that to admin 👉 @filmyfunda_helpbot')
+            k = await query.message.edit('This Movie Not Found 🙁😐 Request that to admin 👉 @filmy_house_help_bot')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -407,7 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates', url='https://t.me/filmyfunda_movies')
+            InlineKeyboardButton('Updates', url='https://t.me/filmy_house')
         ], [
             InlineKeyboardButton('Help', callback_data='help'),
             InlineKeyboardButton('About', callback_data='about')
@@ -439,7 +439,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('owner', url='https://t.me/jack_sparow119'),
+            InlineKeyboardButton('owner', url='https://t.me/Divyaprabha77'),
             InlineKeyboardButton('Source Code', callback_data='source')
         ], [
             InlineKeyboardButton('Home', callback_data='start'),
@@ -709,7 +709,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🚀 Here is what Movie.I found for your Request ➾ {search} \n\n〽️ Powered by @filmyfunda_movies"
+        cap = f"🚀 Here is what Movie.I found for your Request ➾ {search} \n\n〽️ Powered by @filmy_house"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
